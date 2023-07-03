@@ -1,4 +1,4 @@
-package com.example.icecreamprojectv2;
+package com.example.icecreamprojectv2.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -21,10 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.icecreamproject1.R;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.icecreamprojectv2.Functions;
+import com.example.icecreamprojectv2.R;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".fr_forgotPass">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="351dp"
+        android:layout_marginBottom="105dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/img_goBack"
+        android:src="@drawable/baseline_arrow_back_34dp" />
+
+    <ImageView
+        android:id="@+id/btnBackForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/helarticologo1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="474dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/background_forgotpass"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="25dp"
+            android:textColor="@color/light_gray_AI"
+            android:text="@string/TV_recup_pass" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginVertical="40dp"
+            android:textColor="@color/light_gray_AI"
+            android:text="@string/tvRecuperar_porCorreo" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/paperplane" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="194dp"
+            android:layout_height="52dp"
+            android:background="@drawable/btn_design_circular"
+            android:textColor="@drawable/txt_btn"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="@null"
+            android:text="@string/btn_passWord_email" />
+    </LinearLayout>
+
+</FrameLayout>

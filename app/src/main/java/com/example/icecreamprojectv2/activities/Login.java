@@ -1,6 +1,7 @@
-package com.example.icecreamprojectv2;
+package com.example.icecreamprojectv2.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +12,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.icecreamprojectv101.R;
+import com.example.icecreamprojectv2.R;
+import com.example.icecreamprojectv2.fr_forgotPass;
+
 
 public class Login extends AppCompatActivity {
     private String idUsuario, nombres, usuario, email, telefono, rol, estado;
@@ -49,7 +52,7 @@ public class Login extends AppCompatActivity {
                 user = correo.getText().toString();
                 contrasena = password.getText().toString();
                 Toast.makeText(Login.this, "Hola Usuario " + user, Toast.LENGTH_SHORT).show();
-                overridePendingTransition(R.anim.to_left, R.anim.from_right);
+                //overridePendingTransition(R.anim.to_left, R.anim.from_right);
             }
         });
 
@@ -77,9 +80,11 @@ public class Login extends AppCompatActivity {
         btnForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentPass = new Intent(Login.this, ForgotPassword.class);
-                startActivity(intentPass);
-                overridePendingTransition(R.anim.to_top, R.anim.from_bottom);
+                fr_forgotPass fr_forgotPass1 = new fr_forgotPass();
+                FragmentTransaction frT = getSupportFragmentManager().beginTransaction();
+                frT.replace(R.id.constraintLogin,fr_forgotPass1);
+
+                frT.commit();
             }
         });
 
@@ -89,7 +94,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(Login.this, RegistroUser.class);
                 startActivity(intent1);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 

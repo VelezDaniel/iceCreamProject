@@ -1,4 +1,4 @@
-package com.example.icecreamprojectv2;
+package com.example.icecreamprojectv2.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.icecreamprojectv2.R;
 
 public class Splash extends AppCompatActivity {
 

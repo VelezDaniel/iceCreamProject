@@ -1,8 +1,10 @@
-package com.example.icecreamprojectv2;
+package com.example.icecreamprojectv2.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.icecreamprojectv2.R;
 
 public class MainActivity extends AppCompatActivity {
 

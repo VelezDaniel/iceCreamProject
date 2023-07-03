@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/signplantilla"
-    tools:context="RegistroUser">
+    tools:context=".activities.RegistroUser">
 
     <ImageButton
         android:id="@+id/btnBack2"
@@ -129,12 +129,12 @@
         android:layout_width="194dp"
         android:layout_height="52dp"
         android:background="@drawable/btn_design_circular"
-        android:text="@string/btn_continuar"
         android:textColor="@drawable/txt_btn"
         android:textSize="18sp"
         android:textStyle="bold"
         android:visibility="visible"
         app:backgroundTint="@null"
+        android:text="@string/btn_continuar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
