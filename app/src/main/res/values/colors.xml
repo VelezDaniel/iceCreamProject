@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="main">#37DBFF</color>
+    <color name="gray_light">#8B4F4F50</color>
+    <color name="darksito_gray">#52525b</color>
+    <color name="dark_gray">#171717</color>
+    <color name="veridian">#043E3E</color>
+    <color name="btnclaro">#95FFE5</color>
+    <color name="textBtn">#0E2E2E</color>
+    <color name="hintColor">#94a3b8</color>
+    <color name="backgroundMain">#94a3b8</color>
+    <color name="titlesLight">#f1f5f9</color>
+    <color name="background_veridian">#044242</color>
+    <color name="btn_disabled">#3E95FFE5</color>
+
+    <!--Colores Menu Principal-->
+    <color name="backgroundMenu">#CEF6FF</color>
+    <color name="colorIconMenu">#1C1B1F</color>
+    <color name="colorTextoBienvenido">#211D1D</color>
+    <color name="color_card">#76D0E3</color>
+    <color name="color_textoIcon_oscuro">#272727</color>
+    <color name="color_texto_claro">#969696</color>
+    <color name="color_fondo_icon">#B5EEFA</color>
+    <color name="color_texto_claro_bienvenido">#797979</color>
+
+    <!--Colors contrast AI Colors -->
+    <color name="rosa_AI">#FF6B6B</color>
+    <color name="rosa2_AI">#dd4d51</color>
+    <color name="rojo_AI">#8f001a</color>
+    <color name="light_cian_AI">#00FFFF</color>
+    <color name="cian_dark_AI">#00999b</color>
+    <color name="black_AI">#0F0F0F</color>
+    <color name="dark_gray_AI">#1f1f1f</color>
+    <color name="gray_AI">#353535</color>
+    <color name="light_gray_AI">#e0e0e0</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

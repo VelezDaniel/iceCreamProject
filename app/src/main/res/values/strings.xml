@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">HELARTICO</string>
+
+    <string name="img_login">logo</string>
+    <string name="img_alt">Cono utilizado como Logo</string>
+    <string name="img_helado1">Imagen de cono para registro</string>
+    <string name="img_key">llave imagen de login</string>
+    <string name="img_user">Imagen de usuario</string>
+    <string name="img_goBack">Volver a la ventana anterior</string>
+
+    <string name="TView_bienvenida">¡Bienvenido!</string>
+    <string name="tv_crear_contrasena">¡Crea una contraseña segura!</string>
+    //activity olvido contraseña
+    <string name="TV_recup_pass">Recibirás un mensaje para recuperar tu contraseña al correo</string>
+    <string name="tvRecuperar_porCorreo">tucorreo@gmail.com</string>
+    <string name="TV_recup_layoutDescription">Recuperar contraseña con numero de celular</string>
+    <string name="edT_email">Correo</string>
+    <string name="edT_emailForgot">Ingresa tu correo</string>
+    <string name="edT_phoneForgot">Ingresa tu celular</string>
+    <string name="btn_forgotemail">Enviar Correo</string>
+    <string name="btn_forgotPhone">Enviar SMS</string>
+    <string name="edT_pass">Contraseña</string>
+    <string name="edTConfirm_pass">Confirmar contraseña</string>
+    <string name="edtNombre">Nombre Completo</string>
+    <string name="edtApellidos">Nombre Usuario</string>
+    <string name="edTDocument">Cedula</string>
+    <string name="edTDocumento">Documento</string>
+    <string name="edTCelular">Celular</string>
+    <string name="edTpassword">constraseña</string>
+    <string name="rol">INgrese su rol</string>
+    <string name="edTdireccion">Agrega tu direccion de residencia</string>
+
+    <string name="btn_ingreso">Ingresar</string>
+    <string name="btn_olvidar">Olvidé mi contraseña</string>
+    <string name="btn_registro">Soy Nuevo</string>
+    <string name="btnVisibility">Visibilida de contraseña</string>
+    <string name="btn_continuar">Continuar</string>
+    <string name="btn_phoneOption">Otro método</string>
+    <string name="img_btn_arrowBack">ArrowBack</string>
+
+    <!--MENU MAIN-->
+    <string name="nombreHelado">Nombre Helado</string>
+    <string name="tipoHelado">Tipo Helado</string>
+    <string name="btnAgregar">Agregar item</string>
+    <string name="bienvenida">¡Hola Daniel!</string>
+    <string name="frase_bienvenida">¿Qué se te antoja probar hoy?</string>
+    <string name="descripcion_carrito">Ir al carrito de compra</string>
+    <string name="descripcion_usuario">Ir a las opciones de usuario</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--Fragment forgot pass -->
+
+</resources>
