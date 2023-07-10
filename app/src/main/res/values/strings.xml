@@ -46,10 +46,7 @@
     <string name="frase_bienvenida">¿Qué se te antoja probar hoy?</string>
     <string name="descripcion_carrito">Ir al carrito de compra</string>
     <string name="descripcion_usuario">Ir a las opciones de usuario</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="descripcion_filstro">filtrar busqueda</string>
     <!--Fragment forgot pass -->
 
 </resources>

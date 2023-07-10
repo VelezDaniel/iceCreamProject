@@ -1,7 +1,7 @@
 package com.example.icecreamprojectv2.activities;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,16 +12,27 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.icecreamprojectv2.Forgot_pass;
 import com.example.icecreamprojectv2.R;
-import com.example.icecreamprojectv2.fr_forgotPass;
+import com.example.icecreamprojectv2.Usuario;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Login extends AppCompatActivity {
-    private String idUsuario, nombres, usuario, email, telefono, rol, estado;
-    private String[] dataUser;
+    //private String idUsuario, nombres, usuario, email, telefono, rol, estado;
+    //private String[] dataUser;
 
     private String user, contrasena;
-    private EditText correo;
+    private EditText document;
     private EditText password;
     private Button btnIngreso;
     private Button btnRegistro;
@@ -38,7 +49,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        correo = findViewById(R.id.edtDoc);
+        document = findViewById(R.id.edtDoc);
         password = findViewById(R.id.Text2pass);
         btnIngreso = findViewById(R.id.btnContinuar);
         btnRegistro = findViewById(R.id.btnRegister);
@@ -49,10 +60,13 @@ public class Login extends AppCompatActivity {
         btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                user = correo.getText().toString();
-                contrasena = password.getText().toString();
-                Toast.makeText(Login.this, "Hola Usuario " + user, Toast.LENGTH_SHORT).show();
-                //overridePendingTransition(R.anim.to_left, R.anim.from_right);
+                String doc = document.getText().toString();
+                String pass = password.getText().toString();
+                if (!doc.isEmpty() && !pass.isEmpty()) {
+                    validarUsuario("https://helarticoproject.000webhostapp.com/apiicedreamproject/autenticar.php");
+                } else {
+                    Toast.makeText(Login.this, "Completa todos los campos para continuar", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -80,11 +94,8 @@ public class Login extends AppCompatActivity {
         btnForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fr_forgotPass fr_forgotPass1 = new fr_forgotPass();
-                FragmentTransaction frT = getSupportFragmentManager().beginTransaction();
-                frT.replace(R.id.constraintLogin,fr_forgotPass1);
-
-                frT.commit();
+                Intent intent2 = new Intent(Login.this, Forgot_pass.class);
+                startActivity(intent2);
             }
         });
 
@@ -98,5 +109,39 @@ public class Login extends AppCompatActivity {
             }
         });
 
+    }
+
+    //VALIDACION DE USUARIO BASE DE DATOS 000WEBHOST
+    private void validarUsuario(String URL){
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(!response.isEmpty()){
+                    Intent seguir = new Intent(Login.this, MainActivity.class);
+                    startActivity(seguir);
+                    //overridePendingTransition(R.anim.to_left, R.anim.from_right);
+                }else{
+                    Toast.makeText(Login.this, "Usuario y contraseña incorrecta", Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Login.this, error.toString(), Toast.LENGTH_LONG).show();
+            }
+        }){
+            @Nullable
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String>parametros= new HashMap<String,String>();
+                parametros.put("texto1",document.getText().toString());
+                parametros.put("texto2",password.getText().toString());
+                return parametros;
+            }
+        };
+        RequestQueue requestqueve = Volley.newRequestQueue(this);
+        requestqueve.add(stringRequest);
     }
 }

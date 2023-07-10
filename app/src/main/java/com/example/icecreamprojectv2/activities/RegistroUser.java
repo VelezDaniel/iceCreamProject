@@ -21,13 +21,14 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.icecreamprojectv2.Functions;
 import com.example.icecreamprojectv2.R;
+import com.example.icecreamprojectv2.Usuario;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class RegistroUser extends AppCompatActivity {
 
-    private String fullnameS, documentS, userS, passwordS, emailS, telefonoS, rolS;
+    //private String fullnameS, documentS, userS, passwordS, emailS, telefonoS, rolS;
     ImageView imgHelado1;
     Button continuar;
     ImageButton btnBack;
@@ -59,15 +60,16 @@ public class RegistroUser extends AppCompatActivity {
         continuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fullnameS = fullname.getText().toString();
-                documentS = documento.getText().toString();
-                userS = user.getText().toString();
-                passwordS = password.getText().toString();
-                emailS = email.getText().toString();
-                telefonoS = telefono.getText().toString();
-                rolS = rol.getText().toString();
-                if (fullnameS.isEmpty() || documentS.isEmpty() || userS.isEmpty() || passwordS.isEmpty() || emailS.isEmpty() || telefonoS.isEmpty() || rolS.isEmpty()){
-                    Toast.makeText(RegistroUser.this, "Inutil llene todo", Toast.LENGTH_SHORT).show();
+                Usuario u1 = new Usuario();
+                u1.modFullnameS(fullname.getText().toString());
+                u1.modDocumentS(documento.getText().toString());
+                u1.modUserS(user.getText().toString());
+                u1.modUserS(password.getText().toString());
+                u1.modUserS(email.getText().toString());
+                u1.modUserS(telefono.getText().toString());
+                u1.modUserS(rol.getText().toString());
+                if (u1.showFullnameS().isEmpty() || u1.showDocumentS().isEmpty() || u1.showUserS().isEmpty() || u1.showPasswordS().isEmpty() || u1.showEmailS().isEmpty() || u1.showTelefonoS().isEmpty() || u1.showRolS().isEmpty()){
+                    Toast.makeText(RegistroUser.this, "Debe llenar todos los campos", Toast.LENGTH_SHORT).show();
                 } else {
                     guardarUsuario("http://helarticoproject.000webhostapp.com/apiicedreamproject/tbuser.php");
                 }
@@ -105,7 +107,6 @@ public class RegistroUser extends AppCompatActivity {
             }
         }){
             @Nullable
-
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> parametros = new HashMap<String, String>();

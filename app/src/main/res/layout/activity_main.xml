@@ -2,6 +2,287 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity"/>
+    android:background="@color/backgroundMenu"
+    tools:context=".activities.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearTop"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/const2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLeft"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            android:layout_marginEnd="275dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/background_icons">
+
+            <ImageButton
+                android:id="@+id/btnUser"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/descripcion_usuario"
+                android:foregroundGravity="center"
+                android:padding="20dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/person_outlinev2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeRight"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="0"
+            android:background="@drawable/background_icons">
+
+            <ImageButton
+                android:id="@+id/btnCarShopp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/descripcion_carrito"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cart_outline" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollVertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="116dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tvUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="22dp"
+                android:text="@string/bienvenida"
+                android:textColor="@color/colorTextoBienvenido"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frase_bienvenida"
+                android:textColor="@color/color_texto_claro_bienvenido"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="22dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <SearchView
+                    android:layout_width="312dp"
+                    android:layout_height="42dp"
+                    android:layout_marginVertical="18dp"
+                    android:iconifiedByDefault="false"
+                    android:layout_marginStart="22dp"
+                    app:queryBackground="@drawable/search_view_background"
+                    app:searchIcon="@null">
+
+                </SearchView>
+
+                <RelativeLayout
+                    android:id="@+id/relativeEqualizer"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/backgroun_icon2"
+                    android:foregroundGravity="center"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:contentDescription="@string/descripcion_filstro"
+                        android:background="@android:color/transparent"
+                        android:foregroundGravity="center"
+                        app:srcCompat="@drawable/filter1" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollVertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/const2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:id="@+id/linearL1"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginVertical="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="200dp"
+                android:layout_height="260dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:id="@+id/linearL1c1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@id/const2">
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/estilo_tarjeta">
+
+                        <ImageView
+                            android:id="@+id/imgproducto"
+                            android:layout_width="115dp"
+                            android:layout_height="120dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="17dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/heladov1" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvNombreHelado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:text="@string/nombreHelado"
+                        android:textColor="@color/color_textoIcon_oscuro"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tvTipoHelado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tipoHelado"
+                        android:textColor="@color/color_texto_claro"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="4dp">
+
+                        <Spinner
+                            android:id="@+id/spinnerP"
+                            android:layout_width="80dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="0.6" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="18dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="0.3"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/btnAgregar"
+                            app:srcCompat="@drawable/pluscircle" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <include layout="@layout/card_main" />
+            <include layout="@layout/card_main"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

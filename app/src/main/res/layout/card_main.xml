@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card1"
+        android:layout_width="200dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:id="@+id/linearL1c1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/const2">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/estilo_tarjeta">
+
+                <ImageView
+                    android:id="@+id/imgproducto"
+                    android:layout_width="115dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="17dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/heladov1" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvNombreHelado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:text="@string/nombreHelado"
+                android:textColor="@color/color_textoIcon_oscuro"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvTipoHelado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tipoHelado"
+                android:textColor="@color/color_texto_claro"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <Spinner
+                    android:id="@+id/spinnerP"
+                    android:layout_width="80dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="0.6" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="18dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0.3"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/btnAgregar"
+                    app:srcCompat="@drawable/pluscircle" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main"
-    tools:context=".fr_forgotPass">
+    tools:context=".Forgot_pass">
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="351dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="105dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/img_goBack"
@@ -21,14 +20,20 @@
 
     <ImageView
         android:id="@+id/btnBackForgot"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginEnd="73dp"
+        android:foregroundGravity="center"
         android:src="@drawable/helarticologo1" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="474dp"
-        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dp"
         android:background="@drawable/background_forgotpass"
         android:orientation="vertical">
 
@@ -37,24 +42,24 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="18sp"
             android:layout_marginTop="80dp"
             android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:text="@string/TV_recup_pass"
             android:textColor="@color/light_gray_AI"
-            android:text="@string/TV_recup_pass" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="18sp"
             android:layout_marginVertical="40dp"
+            android:gravity="center"
+            android:text="@string/tvRecuperar_porCorreo"
             android:textColor="@color/light_gray_AI"
-            android:text="@string/tvRecuperar_porCorreo" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -66,15 +71,15 @@
             android:id="@+id/button"
             android:layout_width="194dp"
             android:layout_height="52dp"
-            android:background="@drawable/btn_design_circular"
-            android:textColor="@drawable/txt_btn"
-            android:textSize="18sp"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
+            android:background="@drawable/btn_design_circular"
+            android:text="@string/btn_passWord_email"
+            android:textColor="@drawable/txt_btn"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:visibility="visible"
-            app:backgroundTint="@null"
-            android:text="@string/btn_passWord_email" />
+            app:backgroundTint="@null" />
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>
