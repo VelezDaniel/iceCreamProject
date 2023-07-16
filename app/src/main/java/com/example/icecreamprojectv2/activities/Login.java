@@ -19,9 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.icecreamprojectv2.Forgot_pass;
+import com.example.icecreamprojectv2.ForgotPass;
 import com.example.icecreamprojectv2.R;
-import com.example.icecreamprojectv2.Usuario;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -94,7 +93,7 @@ public class Login extends AppCompatActivity {
         btnForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(Login.this, Forgot_pass.class);
+                Intent intent2 = new Intent(Login.this, ForgotPass.class);
                 startActivity(intent2);
             }
         });

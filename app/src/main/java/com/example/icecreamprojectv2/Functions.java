@@ -26,7 +26,6 @@ public class Functions {
     //Permite volver a la activity anterior (requiere imageButton y clase final)
     public void handleArrowBackClickToLogin(ImageButton imgArrow, final Class<?> targetActivity){
         imgArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 Context context = imgArrow.getContext();
                 Intent intent = new Intent(context, targetActivity);
